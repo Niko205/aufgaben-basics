@@ -5,8 +5,8 @@ import "fmt"
 func ExampleMakeUnique() {
 	s1 := []string{"a", "b", "a", "c", "b", "a"}
 
-	MakeUnique(s1)
+	s1 = MakeUnique(s1)
 	fmt.Println(s1)
 
-	// Output: [a b a_2 c b_2 a_3]
+	// Output: [a b a2 c b2 a3]
 }

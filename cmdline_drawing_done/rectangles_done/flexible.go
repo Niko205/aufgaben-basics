@@ -1,10 +1,25 @@
 package rectangles
 
+import "fmt"
+
 // Erwartet zwei Seitenlängen `height` und `width`.
 // Zeichnet ein Rechteck mit diesen Seitenlängen auf der Konsole.
 // Die Zeichen für Rand und Füllung des Rechtecks werden als Parameter erwartet.
 func DrawRectangle(height, width int, inner, outer string) {
-	// TODO
+	for i := 0; i < height; i++ {
+		for j := 0; j < width; j++ {
+			if i == 0 || i == height-1 {
+				fmt.Print(outer)
+			} else {
+				if j == 0 || j == width-1 {
+					fmt.Print(outer)
+				} else {
+					fmt.Print(inner)
+				}
+			}
+		}
+		fmt.Println()
+	}
 }
 
 // REMARKS
